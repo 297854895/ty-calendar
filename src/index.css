@@ -1,8 +1,8 @@
 .ty-calendar {
-  user-select: none;
+  user-select: none!important;
   min-height: 500px;
   min-width: 700px;
-  height: inherit;
+  height: inherit!important;
   color: #3c4857;
   display: flex;
 }
