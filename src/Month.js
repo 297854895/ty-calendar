@@ -23,7 +23,7 @@ export default class Month extends React.Component {
   }
   render() {
     const { month, active } = this.state
-    const { monthEndRender } = this.props
+    const { monthEndRender, borderColor } = this.props
     return <ul className='ty-calendar-month'>
       {
         month.map((item, idx) => <li

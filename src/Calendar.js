@@ -57,11 +57,11 @@ export default class Calendar extends React.Component {
     })
   }
   render() {
-    const { children, dataMap, monthEndRender, toggleDay } = this.props
+    const { children, dataMap, monthEndRender, toggleDay, borderColor } = this.props
     const { year, month, day, week, currentYear, currentMonth } = this.state
     return (
       <div className="ty-calendar">
-        <div className="ty-calendar-left">
+        <div className="ty-calendar-left" style={{ borderBottom: `1px solid ${borderColor}`, borderTop: `1px solid ${borderColor}` }}>
           <div className="ty-calendar-today">
             <b>{day}</b>&nbsp;&nbsp;<span>{week}</span>
             <p>{year}&nbsp;年&nbsp;{month}&nbsp;月</p>
@@ -76,13 +76,14 @@ export default class Calendar extends React.Component {
             toggleMonth={this.toggleMonth}
             currentMonth={currentMonth} />
         </div>
-        <div className="ty-calendar-right">
+        <div className="ty-calendar-right" style={{ borderTop: `1px solid ${borderColor}`, borderRight: `1px solid ${borderColor}` }}>
           <div className="ty-calendar-week-head">
             {
               weekHead.map(day => <div>{day}</div>)
             }
           </div>
           <Day
+            borderColor={borderColor}
             toggleDay={this.toggleDay}
             toggleDataList={toggleDay}
             dataMap={dataMap}
@@ -98,8 +99,12 @@ export default class Calendar extends React.Component {
 }
 
 Calendar.propTypes = {
-  toggleDay: PropTypes.func,
+  borderColor: PropTypes.string,
+  // toggleDay: PropTypes.func,
   monthEndRender: PropTypes.func,
   monthData: PropTypes.array,
   dataMap: PropTypes.object
+}
+Calendar.defaultProps = {
+  borderColor: '#dedede'
 }

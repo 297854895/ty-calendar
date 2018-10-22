@@ -78,9 +78,10 @@ export default class Day extends React.Component {
     const { dataMap } = this.props
     return <ul className="ty-calendar-day">
       {
-        day.map(day => <li
+        day.map((day, idx) => <li
           onClick={this.toggleDataList(day)}
           title={`${day.year}年${day.month}月${day.day}日`}
+          style={idx > 0 && ((idx + 1) % 7) === 0 ? { borderRight: `0px` } : {}}
           className={day.high ? 'ty-calendar-day-item' : 'ty-calendar-day-item ty-calendar-day-fade'}>
           <div
             className="ty-calendar-day-circle" style={{ zIndex: 10 }}>

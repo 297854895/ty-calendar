@@ -55,7 +55,7 @@ export default class Test extends Component {
 ```
 ## Props
 | 参数 | 说明 | 类型 | 默认值 |
-| ------ | ------ | ------ | ------ |
+| :------: | :------: | :------: | :------: |
 | toggleDay | 日期切换回调函数 | Function (dateinfo) | -- |
 | monthEndRender | 月份面板结尾渲染 | Fucntion (month) | -- |
 | dataMap | 高亮日期对象  | Map  | {} |
