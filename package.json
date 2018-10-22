@@ -1,6 +1,6 @@
 {
-  "name": "tys-calendar",
-  "version": "0.0.4",
+  "name": "ty-calendar",
+  "version": "0.0.7",
   "main": "dist/index.js",
   "author": "zhukecheng",
   "license": "MIT",

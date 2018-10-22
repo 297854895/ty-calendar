@@ -1,16 +1,17 @@
 .ty-calendar {
+  user-select: none;
   min-height: 500px;
   min-width: 700px;
+  height: inherit;
   color: #3c4857;
   display: flex;
-  user-select: none;
 }
 .ty-calendar-left{
   width: 160px;
-  height: inherit;
   display: flex;
-  flex-direction: column;
+  height: inherit;
   box-sizing: border-box;
+  flex-direction: column;
   border-right: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
 }
@@ -22,11 +23,11 @@
 }
 
 .ty-calendar-left .ty-calendar-today{
-  box-sizing: border-box;
-  padding-top: 16px;
   height: 76px;
   font-size: 14px;
+  padding-top: 16px;
   text-align: center;
+  box-sizing: border-box;
   background-color: rgb(234, 246, 251);
 }
 .ty-calendar-today p{
